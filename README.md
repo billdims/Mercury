@@ -1,5 +1,5 @@
 # Mercury
-Improved version of Cookie. 
+Improved/Advanced version of Cookie. 
 
 ## Language 
 - Python
