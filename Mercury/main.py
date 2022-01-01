@@ -3,7 +3,7 @@ from discord.ext import commands
 
 # Token
 
-TOKEN = 'OTIzMjAyMDI3NzAwNTE0ODQ3.YcMk4w.NObthI2yeU1_Py2T67HQriZ3Fxs'
+TOKEN = ''
 
 
 # Prefix
