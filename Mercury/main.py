@@ -34,7 +34,7 @@ async def suggestion(ctx, *, description):
     embed = discord.Embed(title='__Suggestion__', description=f'', color=discord.Color.dark_gray())
     embed.set_footer(text=f'Suggested by - {ctx.author}', icon_url=ctx.author.avatar_url)
     embed.add_field(name='Description', value=description)
-    channel = ctx.guild.get_channel(885842704796385370)  # <------- Put the Suggestions channel ID inside the brackets.
+    channel = ctx.guild.get_channel()  # <------- Put the Suggestions channel ID inside the brackets.
     msg = await channel.send(embed=embed)
     await msg.add_reaction('✅')
     await msg.add_reaction('❌')
@@ -46,7 +46,7 @@ async def poll(ctx, *, message):
     embed = discord.Embed(title=f'__Poll__', color=discord.Color.dark_gray())
     embed.set_footer(text=f'Created by - {ctx.author}', icon_url=ctx.author.avatar_url)
     embed.add_field(name='Description', value=f'{message}', inline=False)
-    channel = ctx.guild.get_channel(885839867085463562)  # <------- Put the Poll channel ID inside the brackets.
+    channel = ctx.guild.get_channel()  # <------- Put the Poll channel ID inside the brackets.
     msg = await channel.send(embed=embed)
     await msg.add_reaction('✅')
     await msg.add_reaction('❌')
@@ -58,7 +58,7 @@ async def announcement(ctx, *, message):
     embed = discord.Embed(title=f'**__Announcement__**', color=discord.Color.dark_gray())
     embed.set_footer(text=f'Announced by - {ctx.author}', icon_url=ctx.author.avatar_url)
     embed.add_field(name='Description:', value=f'{message}', inline=False)
-    channel = ctx.channel.send(908111629537914932)  # <------- Put the Announcements channel ID inside the brackets.
+    channel = ctx.channel.send()  # <------- Put the Announcements channel ID inside the brackets.
     await ctx.send(embed=embed)
 
 
@@ -67,7 +67,7 @@ async def announcement(ctx, *, message):
 async def update(ctx, *, description):
     embed = discord.Embed(title='__Update__', description=f' ', color=discord.Color.dark_gray())
     embed.add_field(name='Description', value=description)
-    channel = ctx.guild.get_channel(926964458922868776)  # <------- Put the Updates/Changelog channel ID inside the brackets.
+    channel = ctx.guild.get_channel()  # <------- Put the Updates/Changelog channel ID inside the brackets.
     await ctx.send(embed=embed)
 
 
